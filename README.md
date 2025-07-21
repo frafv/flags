@@ -17,13 +17,26 @@ MIT, see [LICENSE.txt](https://github.com/gosquared/flags/blob/master/LICENSE.tx
 
 If you want to build your own version of this flag set, with any additions or modifications, just edit the files in `src/flags`. Each flag has its own folder, and inside each folder there is one PNG file for each size of the flag. Also in each folder is a file called `code`, which contains the ISO-3166-2 country code for the flag.
 
+### UNIX
+
 To generate the full set, just run `make` (you may want to run `make clean` if you have removed any flags). To speed up generation, try running `make -jN` where `N` is the number of CPU cores you have (e.g. `make -j4` on a quad-core machine)
 
-### Tools required for generating the set
+#### Tools required for generating the set
 
  * GNU Make
  * imagemagick
  * png2icns (provided on Ubuntu by `icnsutils`, or [via sourceforge](http://icns.sourceforge.net/))
 
+
+### Windows
+
+To generate the full set, execute `Make.ps1` script. However, there are several limitations:
+ * No PNG optimization
+ * ICO files are not generated
+
+#### Tools required for generating the set
+
+ * Windows PowerShell 3+
+ * ImageMagick
 
 [1]: https://www.gosquared.com/resources/flag-icons
